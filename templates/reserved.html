@@ -6,27 +6,33 @@
         <title>Reservations</title>
     </head>
     <body>
+        {% extends "bootstrap/base.html" %}
+        {% block content %}
         <h1>Current Reservations</h1>
-        <table border = 1>
+        <table class="table table-bordered table-hover">
             <thead>
-                <td>Name</td>
-                <td>Room Number</td>
-                <td>Check-In Date</td>
-                <td>Check-Out Date</td>
-                <td>Email</td>
-            </thead>
-
-            {% for row in rows %}
                 <tr>
-                    <td>{{row["name"]}}</td>
-                    <td>{{row["roomNum"]}}</td>
-                    <td>{{row["checkIn"]}}</td>
-                    <td>{{row["checkOut"]}}</td>
-                    <td>{{row["email"]}}</td>
+                    <th>Name</th>
+                    <th>Room Number</th>
+                    <th>Check-In Date</th>
+                    <th>Check-Out Date</th>
+                    <th>Email</th>
                 </tr>
-            {% endfor %}
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        <td>{{row["name"]}}</td>
+                        <td>{{row["roomNum"]}}</td>
+                        <td>{{row["checkIn"]}}</td>
+                        <td>{{row["checkOut"]}}</td>
+                        <td>{{row["email"]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
 
-        <a href = "/">Back to Home</a>
+        <a href = "/" class="btn btn-primary btn-sm">Back to Home</a>
+        {% endblock %}
     </body>
 </html>

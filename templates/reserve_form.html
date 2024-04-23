@@ -6,6 +6,8 @@
         <title>Reservation form</title>
     </head>
     <body>
+        {% extends "bootstrap/base.html" %}
+        {% block content %}
         <form action = "{{url_for('reserve_record') }}" method = "post">
             <h1>Reservation Form</h1>
             <p>Please fill out the following information before pressing submit</p>
@@ -32,6 +34,7 @@
 
         <br>
 
-        <a href = "/">Back to Home</a>
+        <a href = "/" class="btn btn-primary btn-sm">Back to Home</a>
+        {% endblock %}
     </body>
 </html>
