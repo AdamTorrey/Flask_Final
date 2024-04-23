@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reservations</title>
+    </head>
+    <body>
+        <h1>Current Reservations</h1>
+        <table border = 1>
+            <thead>
+                <td>Name</td>
+                <td>Room Number</td>
+                <td>Check-In Date</td>
+                <td>Check-Out Date</td>
+                <td>Email</td>
+            </thead>
+
+            {% for row in rows %}
+                <tr>
+                    <td>{{row["name"]}}</td>
+                    <td>{{row["roomNum"]}}</td>
+                    <td>{{row["checkIn"]}}</td>
+                    <td>{{row["checkOut"]}}</td>
+                    <td>{{row["email"]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <a href = "/">Back to Home</a>
+    </body>
+</html>
