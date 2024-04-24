@@ -1,0 +1,23 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Palatino, URW Palladio L, serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+}

@@ -4,13 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
+        {% extends "bootstrap/base.html" %}
+        {% block styles %}
+        {{super()}}
+        <link rel="stylesheet" href="{{url_for('.static', filename='template.css')}}">
+        {% endblock %}
     </head>
     <body>
-        {% extends "bootstrap/base.html" %}
         {% block content %}
         <h1>Welcome to the Panther Hotel</h1>
-        <p>The one and only panther themed hotel on the east coast!</p>
-        <p>How can we help you?</p>
+        <p class="center">The one and only panther themed hotel on the east coast!</p>
+        <p class="center">How can we help you?</p>
 
         <a href="/reservations" class="btn btn-primary btn-lg btn-block">Check current reservations?</a>
         <a href="/reserveform" class="btn btn-primary btn-lg btn-block">Make a reservation?</a>

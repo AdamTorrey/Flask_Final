@@ -4,9 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Reservation Record</title>
+        {% extends "bootstrap/base.html" %}
+        {% block styles %}
+        {{super()}}
+        <link rel="stylesheet" href="{{url_for('.static', filename='template.css')}}">
+        {% endblock %}
     </head>
     <body>
-        {% extends "bootstrap/base.html" %}
         {% block content %}
         <h2>Thank you for submitting!</h2>
         <p>{{ msg }}</p>
